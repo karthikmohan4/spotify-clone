@@ -4,9 +4,9 @@ import { protectRoute, requireAdmin } from "../middleware/auth.middleware.js";
 const router = Router();
 
 router.get('/',protectRoute,requireAdmin,getAllSongs);
-router.get('/',getFeaturedSongs);
-router.get('/',getMadeForYousongs);
-router.get('/',getTrendingSongs);
+router.get('/featuredSongs',getFeaturedSongs);
+router.get('/madeForYouSongs',getMadeForYousongs);
+router.get('/trendingSongs',getTrendingSongs);
 
 
 export default router
